@@ -1,5 +1,8 @@
+import 'package:flut22222/Widgets/my_icon.dart';
 import 'package:flutter/material.dart';
 
+import '../Widgets/my_image.dart';
+import '../Widgets/my_rich_text.dart';
 import '../Widgets/my_text.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -37,8 +40,12 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+    // ignore: prefer_const_constructors
     return Scaffold(
-        backgroundColor: Colors.brown, body: SafeArea(child: MyText())
+        backgroundColor: Colors.brown,
+        body: const SafeArea(
+          child: MyImage(),
+        )
         // This trailing comma makes auto-formatting nicer for build methods.
         );
   }

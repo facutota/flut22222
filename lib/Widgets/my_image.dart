@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 
-class MyIcon extends StatelessWidget {
-  const MyIcon({super.key});
+class MyImage extends StatelessWidget {
+  const MyImage({super.key});
 
   @override
   Widget build(BuildContext context) {
     // ignore: todo
     // TODO: implement build
-    return const Icon(
-      Icons.pets,
-      color: Colors.white,
-      size: 50,
+    return const Image(
+      image: AssetImage("assets/images/cody.jpeg"),
     );
   }
 }
