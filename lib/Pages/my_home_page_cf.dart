@@ -1,15 +1,11 @@
-import 'package:flut22222/Widgets/Basicos/my_icon.dart';
 import 'package:flutter/material.dart';
 
-import '../Widgets/Basicos/my_app_bar.dart';
-import '../Widgets/Basicos/my_buttons.dart';
-import '../Widgets/Basicos/my_floating_action_button.dart';
-import '../Widgets/Basicos/my_image.dart';
-import '../Widgets/Basicos/my_rich_text.dart';
-import '../Widgets/Basicos/my_text.dart';
+import '../Widgets/Actividad/my_app_bar_cf.dart';
+import '../Widgets/Actividad/my_floating_action_button_cf.dart';
+import '../Widgets/Actividad/my_image_cf.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class MyHomePageCF extends StatefulWidget {
+  const MyHomePageCF({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -23,18 +19,10 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePageCF> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
+class _MyHomePageState extends State<MyHomePageCF> {
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -45,13 +33,14 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     // ignore: prefer_const_constructors
     return Scaffold(
-        backgroundColor: Colors.brown,
-        floatingActionButton: MyFloatingActionButton(),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        appBar: MyAppBar(),
-        body: const SafeArea(
-          child: MyButtons(),
+        backgroundColor: Colors.white,
+        floatingActionButton: MyFloatingActionButtonCF(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+        appBar: MyAppBarCF(),
+        body: Center(
+          child: MyImageCF(),
         )
+
         // This trailing comma makes auto-formatting nicer for build methods.
         );
   }
