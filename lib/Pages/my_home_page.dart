@@ -1,6 +1,9 @@
 import 'package:flut22222/Widgets/my_icon.dart';
 import 'package:flutter/material.dart';
 
+import '../Widgets/my_app_bar.dart';
+import '../Widgets/my_buttons.dart';
+import '../Widgets/my_floating_action_button.dart';
 import '../Widgets/my_image.dart';
 import '../Widgets/my_rich_text.dart';
 import '../Widgets/my_text.dart';
@@ -43,8 +46,11 @@ class _MyHomePageState extends State<MyHomePage> {
     // ignore: prefer_const_constructors
     return Scaffold(
         backgroundColor: Colors.brown,
+        floatingActionButton: MyFloatingActionButton(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        appBar: MyAppBar(),
         body: const SafeArea(
-          child: MyImage(),
+          child: MyButtons(),
         )
         // This trailing comma makes auto-formatting nicer for build methods.
         );
