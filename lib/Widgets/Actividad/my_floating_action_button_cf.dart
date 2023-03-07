@@ -1,4 +1,7 @@
+import 'package:flut22222/Pages/play_list_page.dart';
 import 'package:flutter/material.dart';
+
+import '../../Common/my_routers.dart';
 
 class MyFloatingActionButtonCF extends StatelessWidget {
   const MyFloatingActionButtonCF({super.key});
@@ -9,7 +12,9 @@ class MyFloatingActionButtonCF extends StatelessWidget {
     // TODO: implement build
     return FloatingActionButton(
       onPressed: () {
-        print("MyFloatingActionButton");
+        // Navigator.popAndPushNamed(context, routePlayList);
+        Navigator.pushNamedAndRemoveUntil(
+            context, routePlayList, (route) => false);
       },
       child: Icon(
         Icons.add,

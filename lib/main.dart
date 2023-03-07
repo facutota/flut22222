@@ -1,5 +1,7 @@
+import 'package:flut22222/Common/my_routers.dart';
 import 'package:flutter/material.dart';
 
+import 'Pages/login_page.dart';
 import 'Pages/my_home_page_cf.dart';
 
 void main() {
@@ -15,10 +17,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
+      onGenerateRoute: MyRouters.generateRoute,
+      initialRoute: routeLogin,
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
-      home: const MyHomePageCF(title: 'Flutter Demo Home Page'),
+      home: LoginPage(),
     );
   }
 }
