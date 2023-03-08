@@ -1,6 +1,11 @@
 import 'package:flut22222/Pages/my_home_page_cf.dart';
 import 'package:flutter/material.dart';
 
+import '../Widgets/MultiChild/my_column.dart';
+import '../Widgets/MultiChild/my_row.dart';
+import '../Widgets/MultiChild/my_stack.dart';
+import '../Widgets/MultiChild/my_wrap.dart';
+
 class NowPlayingPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => NowPlayingPageState();
@@ -11,12 +16,7 @@ class NowPlayingPageState extends State<NowPlayingPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: SafeArea(
-        child: ElevatedButton(
-          child: Text("MyHomePageCF"),
-          onPressed: () => {Navigator.pop(context)},
-        ),
-      ),
+      body: SafeArea(child: MyStack()),
     );
   }
 }

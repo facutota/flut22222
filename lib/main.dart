@@ -18,11 +18,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       onGenerateRoute: MyRouters.generateRoute,
-      initialRoute: routeLogin,
+      initialRoute: routeNowPlaying,
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
-      home: LoginPage(),
     );
   }
 }
