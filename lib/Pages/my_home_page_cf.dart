@@ -1,9 +1,9 @@
 import 'package:flut22222/Common/home_arguments.dart';
 import 'package:flutter/material.dart';
 
-import '../Widgets/Actividad/my_app_bar_cf.dart';
-import '../Widgets/Actividad/my_floating_action_button_cf.dart';
-import '../Widgets/Actividad/my_image_cf.dart';
+import '../Widgets/Basicos/Actividad/my_app_bar_cf.dart';
+import '../Widgets/Basicos/Actividad/my_floating_action_button_cf.dart';
+import '../Widgets/Basicos/Actividad/my_image_cf.dart';
 
 class MyHomePageCF extends StatefulWidget {
   const MyHomePageCF({super.key});

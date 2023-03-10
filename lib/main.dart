@@ -20,13 +20,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      //onGenerateRoute: MyRouters.generateRoute,
-      //initialRoute: routeNowPlaying,
+      onGenerateRoute: MyRouters.generateRoute,
+      initialRoute: routeNowPlaying,
 
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
-      home: MyHomePageShak(),
+      //home: MyHomePageShak(),
     );
   }
 }
