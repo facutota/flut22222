@@ -1,4 +1,5 @@
 import 'package:flut22222/Pages/my_home_page_cf.dart';
+import 'package:flut22222/Widgets/MultiChild/Actividad/my_column_shak.dart';
 import 'package:flutter/material.dart';
 
 import '../Widgets/MultiChild/my_column.dart';
@@ -16,7 +17,7 @@ class NowPlayingPageState extends State<NowPlayingPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: SafeArea(child: MyStack()),
+      body: SafeArea(child: MyColumnShak()),
     );
   }
 }
