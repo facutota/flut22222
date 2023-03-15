@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       initialRoute: routeNowPlaying,
 
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
+        primarySwatch: Colors.red,
       ),
       //home: MyHomePageShak(),
     );

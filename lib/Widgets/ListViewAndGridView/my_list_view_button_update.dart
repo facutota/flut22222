@@ -1,15 +1,17 @@
-import 'package:flut22222/Widgets/ListViewAndGridView/Items/my_list_tile_button.dart';
+import 'package:flut22222/Widgets/ListViewAndGridView/Items/my_list_tile_button_global_key.dart';
 import 'package:flutter/material.dart';
 import 'package:flut22222/Model/sound.dart';
 
-class MyListViewButtonDelete extends StatefulWidget {
-  const MyListViewButtonDelete({super.key});
+import '../../Common/my_keys.dart';
+
+class MyListViewButtonUpdate extends StatefulWidget {
+  MyListViewButtonUpdate() : super(key: myListViewKey);
 
   @override
   State<StatefulWidget> createState() => MyListViewState();
 }
 
-class MyListViewState extends State<MyListViewButtonDelete> {
+class MyListViewState extends State<MyListViewButtonUpdate> {
   List<Sound> mySounds = [];
 
   @override
@@ -36,7 +38,7 @@ class MyListViewState extends State<MyListViewButtonDelete> {
             direction: DismissDirection
                 .endToStart, //para elegir de que direccion se elimina el item
             key: ObjectKey(sound),
-            child: MyListTileButton(sound, remove),
+            child: MyListTileButtonGlobalKey(sound, index),
             onDismissed: (direction) {
               remove(sound);
             },
@@ -45,6 +47,18 @@ class MyListViewState extends State<MyListViewButtonDelete> {
       ),
     );
   } //return
+
+  update(Sound sound, int index) {
+    setState(() {
+      mySounds[index] = sound;
+    });
+  }
+
+  add(Sound sound) {
+    setState(() {
+      mySounds.add(sound);
+    });
+  }
 
   remove(Sound sound) {
     setState(() {
