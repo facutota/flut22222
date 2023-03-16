@@ -1,8 +1,11 @@
 import 'package:flut22222/Pages/my_home_page_cf.dart';
+import 'package:flut22222/Widgets/Form/my_check_box.dart';
 import 'package:flut22222/Widgets/ListViewAndGridView/Items/my_card.dart';
 import 'package:flut22222/Widgets/MultiChild/Actividad/my_column_shak.dart';
 import 'package:flutter/material.dart';
 
+import '../Widgets/Form/my_date_picker.dart';
+import '../Widgets/Form/my_radio.dart';
 import '../Widgets/ListViewAndGridView/Actividad/play_list_view.dart';
 import '../Widgets/ListViewAndGridView/Items/my_container.dart';
 import '../Widgets/ListViewAndGridView/Items/my_list_tile.dart';
@@ -27,7 +30,7 @@ class NowPlayingPageState extends State<NowPlayingPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: SafeArea(child: PlayListView()),
+      body: SafeArea(child: MyDatePicker()),
     );
   }
 }
