@@ -13,7 +13,7 @@ class MyDatePickerState extends State<MyDatePicker> {
     // TODO: implement build
 
     return ElevatedButton(
-        onPressed: () => selectDate(), child: Text(selectDate().toString()));
+        onPressed: () => selectDate(), child: Text(initDate.toString()));
   }
 
   selectDate() async {
