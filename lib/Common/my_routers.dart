@@ -5,9 +5,11 @@ import 'package:flut22222/Pages/play_list_page.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
+import '../Pages/my_home_page_menu.dart';
 import '../Pages/now_playing_page_update.dart';
 
 const String routeHome = "/home";
+const String routeHomeMenu = "/home_menu";
 const String routeLogin = "/login";
 const String routePlayList = "/play_list";
 const String routeNowPlaying = "/now_playing";
@@ -19,6 +21,12 @@ class MyRouters {
       case "/home":
         return PageTransition(
             child: MyHomePageCF(),
+            type: PageTransitionType.scale,
+            settings: settings,
+            alignment: Alignment.center);
+      case "/home_menu":
+        return PageTransition(
+            child: MyHomePageMenu(),
             type: PageTransitionType.scale,
             settings: settings,
             alignment: Alignment.center);

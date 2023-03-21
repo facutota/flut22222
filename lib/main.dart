@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       onGenerateRoute: MyRouters.generateRoute,
-      initialRoute: routeNowPlaying,
+      initialRoute: routeHomeMenu,
 
       theme: ThemeData(
         primarySwatch: Colors.red,
