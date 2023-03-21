@@ -4,6 +4,8 @@ import 'package:flut22222/Widgets/ListViewAndGridView/Items/my_card.dart';
 import 'package:flut22222/Widgets/MultiChild/Actividad/my_column_shak.dart';
 import 'package:flutter/material.dart';
 
+import '../Widgets/Form/Actividad/LoginForm.dart';
+import '../Widgets/Form/Actividad/login.dart';
 import '../Widgets/Form/my_date_picker.dart';
 import '../Widgets/Form/my_form.dart';
 import '../Widgets/Form/my_radio.dart';
@@ -33,7 +35,7 @@ class NowPlayingPageState extends State<NowPlayingPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: SafeArea(child: MyForm()),
+      body: SafeArea(child: Login()),
     );
   }
 }
