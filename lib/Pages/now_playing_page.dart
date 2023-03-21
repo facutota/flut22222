@@ -5,7 +5,10 @@ import 'package:flut22222/Widgets/MultiChild/Actividad/my_column_shak.dart';
 import 'package:flutter/material.dart';
 
 import '../Widgets/Form/my_date_picker.dart';
+import '../Widgets/Form/my_form.dart';
 import '../Widgets/Form/my_radio.dart';
+import '../Widgets/Form/my_switch.dart';
+import '../Widgets/Form/my_text_field.dart';
 import '../Widgets/ListViewAndGridView/Actividad/play_list_view.dart';
 import '../Widgets/ListViewAndGridView/Items/my_container.dart';
 import '../Widgets/ListViewAndGridView/Items/my_list_tile.dart';
@@ -30,7 +33,7 @@ class NowPlayingPageState extends State<NowPlayingPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: SafeArea(child: MyDropDownButton()),
+      body: SafeArea(child: MyForm()),
     );
   }
 }

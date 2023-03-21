@@ -1,38 +1,29 @@
 import 'package:flutter/material.dart';
 
-class MyCheckBox extends StatefulWidget {
+class MySwitch extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => MyCheckBoxState();
+  State<StatefulWidget> createState() => MySwitchState();
 }
 
-class MyCheckBoxState extends State<MyCheckBox> {
-  List<String> courses = ["Flutter", "Dart", "Android", "IOS", "REACT"];
-  List<bool> isChecked = [];
-
-  @override
-  void initState() {
-    isChecked = List<bool>.filled(courses.length, false);
-  }
+class MySwitchState extends State<MySwitch> {
+  bool isSwitched = false;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
 
-    return Column(children: [
-      Text(isChecked.toString()),
-      ListView.builder(
-          shrinkWrap: true,
-          itemCount: courses.length,
-          itemBuilder: (context, index) {
-            return CheckboxListTile(
-                title: Text(courses[index]),
-                value: isChecked[index],
-                onChanged: (value) {
-                  setState(() {
-                    isChecked[index] = value as bool;
-                  });
-                });
-          })
-    ]);
+    return SwitchListTile(
+      title: Text(isSwitched ? "On" : "Off"),
+      value: isSwitched,
+      activeTrackColor: Colors.amber,
+      activeColor: Colors.brown,
+      onChanged: (value) => onChanged(value),
+    );
+  }
+
+  onChanged(value) {
+    setState(() {
+      isSwitched = value;
+    });
   }
 }
