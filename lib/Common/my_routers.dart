@@ -7,6 +7,7 @@ import 'package:page_transition/page_transition.dart';
 
 import '../Pages/my_home_page_menu.dart';
 import '../Pages/now_playing_page_update.dart';
+import '../Pages/play_list_view_page.dart';
 
 const String routeHome = "/home";
 const String routeHomeMenu = "/home_menu";
@@ -14,6 +15,7 @@ const String routeLogin = "/login";
 const String routePlayList = "/play_list";
 const String routeNowPlaying = "/now_playing";
 const String routeNowPlayingUpdate = "/now_playing_update";
+const String routePlayListViewPage = "/play_list_view_page";
 
 class MyRouters {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -38,6 +40,8 @@ class MyRouters {
         return MaterialPageRoute(builder: (_) => NowPlayingPage());
       case "/now_playing_update":
         return MaterialPageRoute(builder: (_) => NowPlayingPageUpdate());
+      case "/play_list_view_page":
+        return MaterialPageRoute(builder: (_) => PlayListViewPage());
       default:
         return MaterialPageRoute(builder: (_) => LoginPage());
     }

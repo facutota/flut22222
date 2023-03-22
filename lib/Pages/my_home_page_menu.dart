@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flut22222/Common/home_arguments.dart';
 import 'package:flut22222/Widgets/Menu/Fragments/my_home.dart';
@@ -39,6 +39,8 @@ class MyHomePageMenuState extends State<MyHomePageMenu> {
     MySetting(),
   ];
 
+  int currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -51,15 +53,42 @@ class MyHomePageMenuState extends State<MyHomePageMenu> {
 
     return Scaffold(
         drawer: MyDrawer(),
-        bottomNavigationBar: MyBottomNavigatorBar(),
+        bottomNavigationBar: MyBottomNavigatorBar(onTab, currentIndex),
         backgroundColor: Colors.brown,
-        floatingActionButton: MyFloatingActionButton(),
+        floatingActionButton: MyFloatingActionButton(bottomSheet),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         appBar: MyAppBarMenu(),
-        body: const SafeArea(
-          child: MyButtons(),
-        )
+        body: fragments[currentIndex]
         // This trailing comma makes auto-formatting nicer for build methods.
         );
+  }
+
+  bottomSheet() {
+    showModalBottomSheet(
+        context: context,
+        builder: (builder) {
+          return Column(
+            children: [
+              ListTile(
+                leading: Icon(Icons.share),
+                title: Text("Compartir"),
+              ),
+              ListTile(
+                leading: Icon(Icons.link),
+                title: Text("Copiar Link"),
+              ),
+              ListTile(
+                leading: Icon(Icons.send),
+                title: Text("Enviar"),
+              ),
+            ],
+          );
+        });
+  }
+
+  onTab(int index) {
+    setState(() {
+      currentIndex = index;
+    });
   }
 }
